@@ -1,27 +1,43 @@
 <template>
-<el-container>
   <el-header>
-    <div>
-    <el-button @click="show2 = !show2">About Me</el-button>
+    <h1>稷下学宫</h1>
+    <img src="../assets/00109f59b4b854a8012028a9289b7b.jpg" class="logo">
+    <div style="margin-top: 20px">
+      <el-button @click="show2 = !show2" size="small">学宫</el-button>   
+      <el-badge :value="12" class="item">
+  <el-button size="small">消息</el-button>
+</el-badge>
     <div style="display: flex; margin-top: 20px; height: 100px;">
       <transition name="el-zoom-in-center">
-        <div v-show="show2" class="transition-box">.el-zoom-in-center</div>
+        <div v-show="show2" class="transition-box">文学</div>
       </transition>
       <transition name="el-zoom-in-top">
-        <div v-show="show2" class="transition-box">.el-zoom-in-top</div>
+        <div v-show="show2" class="transition-box">电影</div>
       </transition>
       <transition name="el-zoom-in-bottom">
-        <div v-show="show2" class="transition-box">.el-zoom-in-bottom</div>
+        <div v-show="show2" class="transition-box">图片</div>
+      </transition>
+      <transition name="el-zoom-in-center">
+        <div v-show="show2" class="transition-box">旅游</div>
+      </transition>
+      <transition name="el-zoom-in-top">
+        <div v-show="show2" class="transition-box">艺术</div>
+      </transition>
+      <transition name="el-zoom-in-bottom">
+        <div v-show="show2" class="transition-box">历史</div>
+      </transition>
+      <transition name="el-zoom-in-top">
+        <div v-show="show2" class="transition-box">科技</div>
+      </transition>
+      <transition name="el-zoom-in-bottom">
+        <div v-show="show2" class="transition-box">热点</div>
+      </transition>
+      <transition name="el-zoom-in-center">
+        <div v-show="show2" class="transition-box">音乐</div>
       </transition>
     </div>
   </div>
   </el-header>
-  <el-main>
-    <img src="563089882005204171.jpg">
-  </el-main>
-  <el-footer></el-footer>
-</el-container>
-  
 </template>
 
 <script lang="ts">
@@ -35,6 +51,8 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 })
 export default class Home extends Vue {
    show2:boolean=false;
+   name(params:Int32Array):void{
+   }
 }
 </script>
 
@@ -44,11 +62,18 @@ export default class Home extends Vue {
     width: 200px;
     height: 100px;
     border-radius: 4px;
-    background-color: #409EFF;
+    background-color: rgb(243, 210, 23);
     text-align: center;
-    color: #fff;
+    color: rgb(8, 8, 8);
     padding: 40px 20px;
     box-sizing: border-box;
-    margin-right: 20px;
+    margin-right: 30px;
   }
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
+  .item {
+  margin-left: 40px;
+}
 </style>

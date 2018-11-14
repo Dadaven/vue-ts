@@ -12,7 +12,7 @@ export default new Vuex.Store({
       state.count++
   },
   DECREMENT(state) {
-      state.count--
+      state.count--;
   }
   },
   actions: {
